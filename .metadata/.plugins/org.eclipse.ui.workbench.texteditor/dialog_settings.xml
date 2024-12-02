@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="rror starting ApplicationContext. To display the condition evaluation report re-run your application with &apos;debug&apos; enabled."/>
+		<list key="findhistory">
+			<item value="rror starting ApplicationContext. To display the condition evaluation report re-run your application with &apos;debug&apos; enabled."/>
+		</list>
+	</section>
+</section>
