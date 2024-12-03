@@ -1,0 +1,75 @@
+===Base de datos basenearby
+
+== Estructura de tabla para la tabla categorias_match
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**cat_mat_id**//|int(11)|No|
+|cat_mat_amistad|varchar(15)|Sí|NULL
+|cat_mat_casual|varchar(15)|Sí|NULL
+|cat_mat_diversion|varchar(15)|Sí|NULL
+|cat_mat_romance|varchar(15)|Sí|NULL
+== Volcado de datos para la tabla categorias_match
+
+== Estructura de tabla para la tabla citas
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**cit_id**//|int(11)|No|
+|cit_fecha|date|Sí|NULL
+|cit_hora|varchar(10)|Sí|NULL
+|cit_ubicacion|varchar(50)|Sí|NULL
+|cit_estado|varchar(15)|Sí|NULL
+|matches_mat_id|int(11)|No|
+|matches_mat_id1|int(11)|No|
+|categorias_match_cat_mat_id|int(11)|No|
+== Volcado de datos para la tabla citas
+
+== Estructura de tabla para la tabla fotografias
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**fot_id**//|int(11)|No|
+|fot_fechaSubida|date|Sí|NULL
+|perfiles_per_id|int(11)|No|
+|perfiles_per_id1|int(11)|No|
+== Volcado de datos para la tabla fotografias
+
+== Estructura de tabla para la tabla matches
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**mat_id**//|int(11)|No|
+|mat_usu1|int(11)|No|
+|mat_usu2|int(11)|No|
+|categorias_match_cat_mat_id|int(11)|No|
+== Volcado de datos para la tabla matches
+
+== Estructura de tabla para la tabla perfiles
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**per_id**//|int(11)|No|
+|per_nombre|varchar(100)|Sí|NULL
+|per_descripcion|text|Sí|NULL
+|usuarios_usu_id|int(10)|No|
+== Volcado de datos para la tabla perfiles
+
+== Estructura de tabla para la tabla usuarios
+
+|------
+|Columna|Tipo|Nulo|Predeterminado
+|------
+|//**usu_id**//|int(11)|No|
+|usu_nombre|varchar(100)|No|
+|**usu_email**|varchar(100)|No|
+|usu_contraseña|varchar(255)|No|
+|usu_genero|varchar(10)|Sí|NULL
+|usu_edad|int(11)|Sí|NULL
+== Volcado de datos para la tabla usuarios
+
