@@ -58,6 +58,7 @@
 |per_nombre|varchar(100)|Sí|NULL
 |per_descripcion|text|Sí|NULL
 |usuarios_usu_id|int(10)|No|
+|usuarios_usu_id1|int(11)|No|
 == Volcado de datos para la tabla perfiles
 
 == Estructura de tabla para la tabla usuarios

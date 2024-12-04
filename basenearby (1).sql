@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-12-2024 a las 00:50:52
+-- Tiempo de generación: 04-12-2024 a las 01:12:54
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -88,7 +88,8 @@ CREATE TABLE `perfiles` (
   `per_id` int(11) NOT NULL,
   `per_nombre` varchar(100) DEFAULT NULL,
   `per_descripcion` text DEFAULT NULL,
-  `usuarios_usu_id` int(10) UNSIGNED NOT NULL
+  `usuarios_usu_id` int(10) UNSIGNED NOT NULL,
+  `usuarios_usu_id1` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -147,7 +148,8 @@ ALTER TABLE `matches`
 --
 ALTER TABLE `perfiles`
   ADD PRIMARY KEY (`per_id`),
-  ADD KEY `fk_perfiles_usuarios1_idx` (`usuarios_usu_id`);
+  ADD KEY `fk_perfiles_usuarios1_idx` (`usuarios_usu_id`),
+  ADD KEY `fk_perfiles_usuarios1_idx1` (`usuarios_usu_id1`);
 
 --
 -- Indices de la tabla `usuarios`
@@ -220,6 +222,12 @@ ALTER TABLE `matches`
   ADD CONSTRAINT `fk_mat_usu1` FOREIGN KEY (`mat_usu1`) REFERENCES `usuarios` (`usu_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_mat_usu2` FOREIGN KEY (`mat_usu2`) REFERENCES `usuarios` (`usu_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_matches_categorias_match1` FOREIGN KEY (`categorias_match_cat_mat_id`) REFERENCES `categorias_match` (`cat_mat_id`);
+
+--
+-- Filtros para la tabla `perfiles`
+--
+ALTER TABLE `perfiles`
+  ADD CONSTRAINT `fk_perfiles_usuarios1` FOREIGN KEY (`usuarios_usu_id1`) REFERENCES `usuarios` (`usu_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
